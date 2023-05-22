@@ -23,3 +23,15 @@ while(True):
 for i in range(readInt):
     coin_list.append(bool(random.getrandbits(1)))
 
+print(coin_list)
+
+head = 0 #Кол-во монеток лежащих орлом вверх (True)
+tail = 0 #Кол-во монеток лежащих решкой вверх (False)   
+
+#Проходимся по списку монеток и считаем кол-во орлов и решек
+for position in coin_list:
+    if(position): head += 1
+    else: tail += 1
+
+#Проверяем каких монеток меньше и выводим их кол-во, можно вывести какие именно нужно перевернуть, но в ТЗ такой задачи нет.
+print(f'Минимальное количество монет, которые нужно перевернуть: {head if head <= tail else tail}')
