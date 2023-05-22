@@ -19,3 +19,7 @@ while(True):
     else:
         print('Число должно быть ,больше нуля!')
 
+#Заполняем список случайными значениями типа bool
+for i in range(readInt):
+    coin_list.append(bool(random.getrandbits(1)))
+
