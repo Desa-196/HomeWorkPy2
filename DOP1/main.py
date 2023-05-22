@@ -23,4 +23,8 @@ def read_int_from_console():
                 continue
             read_array.append(readInt);
 
-print(read_int_from_console())
+result = 0
+for index, i in enumerate(read_int_from_console()):
+    if index % 2 != 0:
+        result += i
+print(f'Сумма элементов с нечетными индексами равна - {result}')
